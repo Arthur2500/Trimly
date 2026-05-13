@@ -30,6 +30,20 @@ docker-compose down
 
 You're all set to use Trimly with Docker Compose!
 
+## ARM64 Support
+
+The Docker setup now supports ARM64 (e.g. Apple Silicon, Raspberry Pi, ARM servers).
+
+- Native build on ARM devices:
+  ```bash
+  docker compose up --build
+  ```
+- Cross-build ARM64 image explicitly (from any host with Buildx):
+  ```bash
+  docker buildx build --platform linux/arm64 -t trimly-frontend ./frontend
+  docker buildx build --platform linux/arm64 -t trimly-backend ./backend
+  ```
+
 
 ## Updating the Application
 

@@ -1,5 +1,5 @@
 # Verwende Debian als Basis für Scala/Play und installiere Java, ffmpeg sowie sbt per tarball
-FROM debian:latest
+FROM debian:bookworm-slim
 
 RUN apt-get update && apt-get install -y curl default-jre ffmpeg neovim && \
     mkdir -p /opt && \
@@ -27,4 +27,3 @@ CMD ["sbt", "run"]
 #comment to bield and run container
 # docker build -t backend .
 # docker run -p 9000:9000 backend
-

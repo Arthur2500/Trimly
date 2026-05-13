@@ -1,5 +1,5 @@
 # Verwende ein Node.js-Image
-FROM node:latest
+FROM node:22-bookworm-slim
 
 RUN apt-get update && apt-get install -y neovim && rm -rf /var/lib/apt/lists/*
 
